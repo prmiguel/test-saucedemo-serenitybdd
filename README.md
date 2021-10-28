@@ -33,7 +33,7 @@ Default values:
 - browser.name="chrome"
 - browser.headless="true"
 
-<img src="./img/test-execution.mp4" width="500" height="400" />
+<img src="./img/test-execution.webm" width="500" height="400" />
 
 #### Docker Image Test Execution
 ```sh
