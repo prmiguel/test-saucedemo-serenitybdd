@@ -38,7 +38,7 @@ Default values:
 #### Docker Image Test Execution
 ```sh
 cd test-saucedemo-serenitybdd
-docker run -it -p 4444:4444 --rm -v ${PWD}:/code prmiguel/selenium-standalone-chrome bash -c "cd /code; ./gradlew clean test aggregate"
+docker run -it -p 4444:4444 --rm -v ${PWD}:/code -u root prmiguel/selenium-standalone-chrome bash -c "cd /code; ./gradlew clean test aggregate"
 ```
 
 ### Report
