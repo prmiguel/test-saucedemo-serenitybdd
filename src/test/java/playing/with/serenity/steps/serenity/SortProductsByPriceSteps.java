@@ -2,7 +2,6 @@ package playing.with.serenity.steps.serenity;
 
 import net.thucydides.core.annotations.Step;
 import playing.with.serenity.pages.InventoryPage;
-import playing.with.serenity.pages.LoginPage;
 import playing.with.serenity.pages.SortingOptions;
 
 import java.util.Comparator;
@@ -19,15 +18,9 @@ public class SortProductsByPriceSteps {
         double price2 = Double.parseDouble(m2.get("price").replace("$", ""));
         return Double.compare(price1, price2);
     };
-    LoginPage loginPage;
+
     InventoryPage inventoryPage;
     List<Map<String, String>> products;
-
-    @Step
-    public void is_logged_in_with_credentials(String username, String password) {
-        loginPage.open();
-        loginPage.logs_in_with(username, password);
-    }
 
     @Step
     public void sorts_the_products_by_price(SortingOptions sortingOption) {

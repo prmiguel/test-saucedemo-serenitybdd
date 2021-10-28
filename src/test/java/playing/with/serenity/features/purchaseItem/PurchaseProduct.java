@@ -7,14 +7,12 @@ import net.thucydides.core.annotations.Steps;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
+import playing.with.serenity.BaseTests;
 import playing.with.serenity.domain.PersonalInformation;
 import playing.with.serenity.steps.serenity.PurchaseProductSteps;
 
 @RunWith(SerenityRunner.class)
-public class PurchaseProduct {
-
-    @Managed
-    public WebDriver webdriver;
+public class PurchaseProduct extends BaseTests {
 
     @Steps
     public PurchaseProductSteps anna;
@@ -26,8 +24,6 @@ public class PurchaseProduct {
                 generatorInfo.name().lastName(),
                 generatorInfo.address().zipCode());
 
-
-        anna.is_logged_in_with_credentials("standard_user", "secret_sauce");
         anna.starts_the_checkout_for_product("Sauce Labs Fleece Jacket");
         anna.provides_personal_information(checkoutInfo.getFirstName(),
                 checkoutInfo.getLastName(), checkoutInfo.getZipPostalCode());

@@ -13,12 +13,6 @@ public class LogoutSteps {
     MenuBar menuBar;
 
     @Step
-    public void is_logged_in_with_credentials(String username, String password) {
-        loginPage.open();
-        loginPage.logs_in_with(username, password);
-    }
-
-    @Step
     public void logs_out() {
         menuBar.open_menu();
         menuBar.logs_out();

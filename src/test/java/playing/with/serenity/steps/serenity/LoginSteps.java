@@ -38,4 +38,10 @@ public class LoginSteps {
         assertThat(inventoryPage.getDriver().getCurrentUrl(), endsWith("inventory.html"));
         assertThat(inventoryPage.get_page_title(), equalTo("PRODUCTS"));
     }
+
+    @Step
+    public void is_logged_in_with_credentials(String username, String password) {
+        loginPage.open();
+        loginPage.logs_in_with(username, password);
+    }
 }

@@ -9,19 +9,12 @@ import static org.hamcrest.Matchers.equalTo;
 
 public class PurchaseProductSteps {
 
-    LoginPage loginPage;
     InventoryPage inventoryPage;
     MenuBar menuBar;
     CartPage cartPage;
     CheckoutInformationPage checkoutInformationPage;
     CheckoutOverviewPage checkoutOverviewPage;
     CheckoutCompletePage checkoutCompletePage;
-
-    @Step
-    public void is_logged_in_with_credentials(String username, String password) {
-        loginPage.open();
-        loginPage.logs_in_with(username, password);
-    }
 
     @Step
     public void starts_the_checkout_for_product(String itemName) {
