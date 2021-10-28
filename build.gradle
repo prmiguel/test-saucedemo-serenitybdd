@@ -9,7 +9,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath("net.serenity-bdd:serenity-gradle-plugin:2.4.24")
+        classpath("net.serenity-bdd:serenity-gradle-plugin:2.3.12")
     }
 }
 
@@ -22,9 +22,15 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 dependencies {
-    compile 'net.serenity-bdd:serenity-core:2.4.24'
-    compile 'net.serenity-bdd:serenity-junit:2.4.24'
-    testCompile('junit:junit:4.12')
+    testImplementation 'net.serenity-bdd:serenity-core:2.3.12'
+    testImplementation 'net.serenity-bdd:serenity-junit:2.3.12'
+    testImplementation 'junit:junit:4.12'
+}
+
+test {
+    systemProperty "webdriver.base.url", System.getProperty("saucedemo.web.url")
+    systemProperty "webdriver.driver", System.getProperty("browser.name")
+    systemProperty "headless.mode", System.getProperty("browser.headless")
 }
 
 gradle.startParameter.continueOnFailure = true
