@@ -25,6 +25,9 @@ dependencies {
     testImplementation 'net.serenity-bdd:serenity-core:2.3.12'
     testImplementation 'net.serenity-bdd:serenity-junit:2.3.12'
     testImplementation 'junit:junit:4.12'
+    testImplementation 'org.projectlombok:lombok:1+'
+    testAnnotationProcessor 'org.projectlombok:lombok:1+'
+    testImplementation 'com.github.javafaker:javafaker:1.0.2'
 }
 
 test {
