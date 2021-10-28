@@ -10,7 +10,7 @@ Sauce Demo Web UI Tests
 #### Requirements
 Install the following software:
 - AdoptJDK (at least version 1.8 or higher)
-- IntelliJ IDE (CE or EE) - no pluggins needed
+- IntelliJ IDE (CE or EE) - plugins (Lombok)
 - Gradle (optional since the project contains its gradle wrapper)
 - Chrome (latest version)
 - Firefox (latest version)
@@ -33,7 +33,7 @@ Default values:
 - browser.name="chrome"
 - browser.headless="true"
 
-<img src="./img/execution.gif" width="500" height="400" />
+<img src="./img/test-execution.mp4" width="500" height="400" />
 
 #### Docker Image Test Execution
 ```sh

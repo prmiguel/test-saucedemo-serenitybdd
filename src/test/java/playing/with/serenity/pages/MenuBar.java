@@ -16,6 +16,7 @@ public class MenuBar extends PageObject {
     private WebElementFacade shoppingCartLink;
 
     public void open_menu() {
+        menuButton.waitUntilVisible();
         menuButton.click();
     }
 
