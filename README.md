@@ -28,12 +28,10 @@ cd test-saucedemo-serenitybdd
 > -Dbrowser.name="<chrome or firefox>"
 > -Dbrowser.headless="<true or false>"
 
-Default values:
-- saucedemo.web.url="https://www.saucedemo.com"
-- browser.name="chrome"
+Default values:  
+- saucedemo.web.url="https://www.saucedemo.com"  
+- browser.name="chrome"  
 - browser.headless="true"
-
-![caption](./img/test-execution.webm.mov)
 
 #### Docker Image Test Execution
 ```sh
